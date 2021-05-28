@@ -40,15 +40,14 @@ const databaseConfig: DatabaseConfig = {
         port: Env.get('MYSQL_PORT'),
         user: Env.get('MYSQL_USER'),
         password: Env.get('MYSQL_PASSWORD', ''),
-        database: Env.get('MYSQL_DB_NAME'),
+        database: Env.get('MYSQL_DB_NAME')
       },
       migrations: {
-        naturalSort: true,
+        naturalSort: true
       },
       healthCheck: false,
-      debug: false,
-    },
-
+      debug: false
+    }
   }
 }
 
