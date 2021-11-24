@@ -5,7 +5,7 @@ import { StoreValidator } from 'App/Validators/Post/Media'
 import { Post } from 'App/Models'
 import { cuid } from '@ioc:Adonis/Core/Helpers'
 
-export default class MediaController {
+export default class PostMediaController {
   public async store({ request, response, auth, params }: HttpContextContract) {
     await Database.transaction(async (trx) => {
       const { file } = await request.validate(StoreValidator)
