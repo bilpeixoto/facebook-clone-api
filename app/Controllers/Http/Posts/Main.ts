@@ -7,7 +7,9 @@ import fs from 'fs'
 export default class PostsMainController {
   public async index({ request, auth }: HttpContextContract) {
     const { username } = request.qs()
-    const user = (await User.findBy('username', username)) || auth.user!
+    let user
+    if (username) user = await User.findByOrFail('username', username)
+    else user = auth.user!
 
     await user.load('posts', (query) => {
       query.orderBy('id', 'desc')
