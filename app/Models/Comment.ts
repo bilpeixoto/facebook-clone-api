@@ -26,4 +26,5 @@ export default class Comment extends BaseModel {
 
   @belongsTo(() => Post)
   public post: BelongsTo<typeof Post>
+  //Teste
 }

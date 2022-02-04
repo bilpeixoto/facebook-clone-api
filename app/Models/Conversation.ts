@@ -19,4 +19,5 @@ export default class Conversation extends BaseModel {
 
   @belongsTo(() => User, { foreignKey: 'userIdTwo' })
   public userTwo: BelongsTo<typeof User>
+  //bla bla bla
 }
